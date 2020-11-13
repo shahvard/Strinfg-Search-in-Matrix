@@ -1,0 +1,66 @@
+<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+body{
+background-color:#B73225; 
+
+}
+
+table{
+padding-left:100px;
+
+font-size:25px;
+}
+
+div{
+color:white;
+}
+p{
+font-size:25px;
+}
+
+.one{
+border-style:solid;
+border-color: black;
+}
+</style>
+
+<title> Assignment 1</title>
+
+</head>
+
+
+
+
+<body>
+<h1> The Matrix is</h1>
+<table style="color:white;">
+
+<tr th:each= "matrix:${matrixOne}">
+  <td th:each="item:${matrix}">
+         <span th:text="${item}+'   '"></span>
+  </td>
+</tr> 
+</table>
+<div>
+<form action="#" th:action="@{/next}" th:object="${check}" method="get">
+<br>
+<br>
+<br>
+
+Enter the String you want to search in the Matrix:<input type="text" th:field="*{s}"/>
+<br>
+<br>
+<div class="one">
+<p >Please Enter the information :</p><br>
+Name           : <input type="text" th:field="*{client_name}"><br>
+Street Address : <input type="text" th:field="*{street}"> <br>
+City           : <input type="text" th:field="*{city}"><br>
+Province       : <input type="text" th:field="*{province}"><br>	
+Phone number   : <input type="number" th:field="*{phone}">
+</div>
+<input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>

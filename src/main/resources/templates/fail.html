@@ -1,0 +1,53 @@
+<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+h1{
+text-align:center;
+font-size:90px;
+}
+body{
+background-color:red; 
+
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+p{
+
+font-size:50px;
+padding-left:50px;
+}
+img{
+padding-left:900px;
+object-fit:cover;
+width:400px;
+height:400px;
+}
+</style>
+<title> Failed </title>
+</head>
+
+
+<body>
+ <h1> OOPS!!</h1>
+ <p th:text="${word}+'  is not found in the matrix. '"></p>
+ <img src="../static/img/oops.jpg" th:src="@{/img/oops.jpg}"  />
+ 
+ <br>
+ <br>
+ <a href="/" th:href="@{/}"> <button class="button"> Play Again </button>
+ <a href="/gameDone" th:href="@{/gameDone}"> <button class="button"> Quit</button>
+ </body>
+ 
+ 
+ </html>

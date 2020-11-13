@@ -1,0 +1,46 @@
+<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+
+h1{
+	text-align:center;
+	border-bottom-style:solid;
+	
+}
+body{
+	
+	border-style:solid;
+	background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+div{
+padding-left:400px;
+padding-top:100px;
+font-size:25px;
+}
+
+
+
+</style>
+<title> Midterm </title>
+</head>
+
+<body>
+<h1> Character Matrix Generator</h1>
+
+<div>
+
+<form action="#" th:action="@{/generate}" th:object="${matrix}" method="get">
+<p style="font-size:15px">Value Should be Greater than or equal to 5 </p>
+<p> Length of Square Matrix:   <input type="number" th:field="*{m}" min=5> <br> </p>
+
+
+<br>
+
+
+<input type="submit" value="Submit">
+
+
+</form>
+</div>
+</body>
+</html>
